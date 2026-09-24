@@ -1,0 +1,61 @@
+# ==========================================
+# Virtual environments and packages (uv / pip)
+# ==========================================
+# Docker should install its own dependencies inside the container
+.venv/
+venv/
+ENV/
+*.egg-info/
+
+# uv cache
+.uv/
+
+# ==========================================
+# Python cache and tests
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# Local configuration files and secrets
+# ==========================================
+# Avoid passing local credentials to the Docker image
+.env
+*.env
+.env.*
+!.env.example
+
+# ==========================================
+# Local data and static files
+# ==========================================
+# Avoid copying the development database or locally uploaded files
+*.sqlite3
+*.sqlite3-journal
+/media/
+/staticfiles/
+
+# ==========================================
+# Git and development tools
+# ==========================================
+.git
+.gitignore
+.dockerignore
+.vscode/
+.idea/
+*.md
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Extra
+# ==========================================
+Dockerfile
+Dockerfile.dev

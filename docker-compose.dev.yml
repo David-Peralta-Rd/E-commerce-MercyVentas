@@ -1,0 +1,13 @@
+services:
+  api-dev:
+    build:
+      context: ./src/api
+      dockerfile: Dockerfile.dev
+      target: development
+    container_name: api-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src/api/src/api/:/app/src/api
+    env_file:
+      .env
