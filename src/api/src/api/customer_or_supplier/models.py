@@ -14,5 +14,5 @@ class CustomerOrSupplier(models.Model):
     # State
     is_active = models.BooleanField(default=True)
 
-    def __str__(self):
-        return self.company_name
+    # Date
+    date = models.DateField(auto_now=True)
