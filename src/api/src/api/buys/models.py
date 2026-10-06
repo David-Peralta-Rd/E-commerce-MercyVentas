@@ -8,3 +8,6 @@ class Buy(models.Model):
     unit_cost = models.PositiveIntegerField(default=0)
     supplier = models.CharField(max_length=25)
     date = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.product

@@ -8,3 +8,6 @@ class Product(models.Model):
     cost = models.DecimalField(max_digits=25, decimal_places=2)
     stock = models.PositiveIntegerField(default=0)
     date = models.DateField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.name

@@ -16,3 +16,6 @@ class CustomerOrSupplier(models.Model):
 
     # Date
     date = models.DateField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.company_name

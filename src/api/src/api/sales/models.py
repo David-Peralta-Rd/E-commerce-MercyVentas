@@ -9,5 +9,5 @@ class Sale(models.Model):
     customer = models.CharField(max_length=25)
     date = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.product
