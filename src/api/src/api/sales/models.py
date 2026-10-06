@@ -8,3 +8,6 @@ class Sale(models.Model):
     unit_price = models.PositiveIntegerField(default=0)
     customer = models.CharField(max_length=25)
     date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.product
